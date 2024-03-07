@@ -8,7 +8,7 @@ def setup(request):
     driver = webdriver.Chrome()
 
     driver.implicitly_wait(10)
-    driver.get("https://www.saucedemo.com/")
+    driver.get("https://microsoftedge.github.io/Demos/demo-to-do/")
     driver.maximize_window()
     request.cls.driver = driver
     yield
