@@ -9,5 +9,5 @@ class MainPageLocators:
     new_task_submit = (By.CSS_SELECTOR, "input[type='submit']")
     task_list_items = (By.CLASS_NAME, "task")
     task_delete_button = (By.CLASS_NAME, "delete")
-    reopen_specific_task_li = (By.CSS_SELECTOR, "")
+    specific_task_li = (By.XPATH, "")
     completed_lis = (By.CLASS_NAME, "task completed")
