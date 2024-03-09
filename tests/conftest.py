@@ -1,3 +1,6 @@
+import os
+from datetime import datetime
+
 from selenium import webdriver
 from loguru import logger
 import pytest
@@ -15,7 +18,10 @@ def setup(request):
     driver.close()
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def log():
-    logger.add("logs/todoist.log", level="INFO")
+    start_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+    file_name = "logs/" + str(start_time) + ".log"
+    logger.add(file_name, level="INFO")
     yield logger
+
